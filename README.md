@@ -5,14 +5,14 @@ Angular Directive for full page scrolling applications.
 
 ##Installation
     bower install br-fullpage
-    
+
 ##Browser Compatibility
 Tested browsers:
 *   IE
 *   Chrome
 *   Firefox
 *   Safari
-  
+
 ##Usage
 ####Include
   ```html
@@ -65,3 +65,7 @@ Tested browsers:
   This parameter specifies the class of the sections that represent your full pages.
   The fullpage directive should only have direct children with this class.
 
+##Events
+  The fullpage directive emits a `br-fullpage:pageScrolled` event when the page is scrolled and passes the page index as a parameter.
+
+  You can listen to this event via `$scope.$on` if you need to. For example, if you want to change a `$location.path()` value for each page.

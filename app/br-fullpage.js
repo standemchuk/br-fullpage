@@ -95,6 +95,8 @@
                     angular.element(document.getElementsByClassName('br-fullpage-nav-item')).removeClass('active');
                     angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
                     sessionStorage.setItem('br-fullpage-index', pageIndex);
+                    // notify listeners about page scroll
+                    $scope.$emit('br-fullpage:pageScrolled', pageIndex);
 
                     setTimeout(function () {
                         scrolling = false;
